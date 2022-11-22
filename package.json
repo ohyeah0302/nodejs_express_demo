@@ -1,0 +1,37 @@
+{
+  "name": "nodejs_express_demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "beautiful": "prettier --single-quote --trailing-comma all --write 'src/**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon  ./src/index.js",
+    "watch": "node-sass --watch src/resources/scss --output src/public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ohyeah0302/nodejs_express_demo.git"
+  },
+  "author": "Quy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ohyeah0302/nodejs_express_demo/issues"
+  },
+  "homepage": "https://github.com/ohyeah0302/nodejs_express_demo#readme",
+  "lint-staged":{
+    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write 'src/**/*.{js,son,scss}'"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.6"
+  },
+  "devDependencies": {
+    "husky": "^8.0.2",
+    "lint-staged": "^13.0.3",
+    "morgan": "^1.10.0",
+    "node-sass": "^7.0.3",
+    "nodemon": "^2.0.20",
+    "prettier": "^2.7.1"
+  }
+}
