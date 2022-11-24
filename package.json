@@ -4,7 +4,7 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
-    "beautiful": "prettier --single-quote --trailing-comma all --write 'src/**/*.js'",
+    "beautiful": "prettier --single-quote --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon  ./src/index.js",
     "watch": "node-sass --watch src/resources/scss --output src/public/css"
@@ -19,12 +19,11 @@
     "url": "https://github.com/ohyeah0302/nodejs_express_demo/issues"
   },
   "homepage": "https://github.com/ohyeah0302/nodejs_express_demo#readme",
-  "lint-staged":{
-    "src/**/*.{js,json,scss}": "prettier --single-quote --trailing-comma all --write 'src/**/*.{js,son,scss}'"
-  },
   "dependencies": {
     "express": "^4.18.2",
-    "express-handlebars": "^6.0.6"
+    "express-handlebars": "^6.0.6",
+    "mongoose": "^6.7.2",
+    "mongoose-slug-generator": "^1.0.4"
   },
   "devDependencies": {
     "husky": "^8.0.2",
@@ -33,5 +32,13 @@
     "node-sass": "^7.0.3",
     "nodemon": "^2.0.20",
     "prettier": "^2.7.1"
+  },
+  "lint-staged": {
+    "*.js": "prettier --single-quote --write \"src/**/*.js\""
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "lint-staged"
+    }
   }
 }

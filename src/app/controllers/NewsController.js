@@ -1,17 +1,14 @@
-class NewsController{
-    
-    // GET /news
-    index(req,res){
-        res.render('news')
-    }
+class NewsController {
+  // GET /news
+  index(req, res) {
+    res.render('news');
+  }
 
-    // GET :slug
-    show(req,res){
-        console.log(req.params)
-        res.send(`${req.params.slug}`)
-    }
-
-
+  // GET :slug
+  show(req, res) {
+    console.log(req.params);
+    res.send(`${req.params.slug}`);
+  }
 }
 
-module.exports = new NewsController
+module.exports = new NewsController();
